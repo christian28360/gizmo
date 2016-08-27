@@ -1,0 +1,683 @@
+/* pour initialiser toutes les balises */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+  margin:0; padding:0;
+}
+@media -o-paged {
+  html { 
+    height: 100%;
+    overflow: -o-paged-x;
+  }
+}
+fieldset,img { border: 0;}
+ul, ol {
+  margin:  10px 0px 0px 30px;
+}
+
+html {
+  background-color:        #FFFFCC
+}
+body {
+  font-family :    Verdana, Arial, sans-serif;
+  font-size :      10px;
+  height:          auto;
+  margin-top:      10px;
+  margin-left:     auto;  /* équivaut à align=center sur la balise */
+  margin-right:  auto;  /* équivaut à align=center sur la balise */
+  margin:          10px;
+  width:           600px;
+}
+acronym, abbr {
+  cursor : help;
+  BORDER-BOTTOM: 1px solid;
+}
+table { 
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius:  15px;
+  background:    #CAFFDF;
+  width:      950px;
+  height:     auto;
+  margin-left:  auto;  /* équivaut à align=center sur la balise */
+  margin-right:  auto;  /* équivaut à align=center sur la balise */
+}
+ h2 {
+  MARGIN-TOP:       2px;
+  MARGIN-BOTTOM:    10px;
+  margin-left:      15px;
+}
+h3 {
+  MARGIN-TOP:          1em;
+  margin-left:         15px;
+  BORDER-LEFT-COLOR:   black;
+  BORDER-BOTTOM-WIDTH: thin;
+  BORDER-BOTTOM-COLOR: #336633;
+  BORDER-TOP-COLOR:    black;
+  BORDER-RIGHT-COLOR:  black;
+}
+h4 {
+  TEXT-TRANSFORM:    uppercase;
+  margin-left:       15px;
+  color:             maroon;
+  font-size:         140%;
+  margin-top:        15px;
+  margin-bottom:     10px;
+}
+h5 {
+  font-size:     13px;
+  margin-left:   5px;
+  height:        20px;
+  margin-top:    15px;
+  margin-bottom: 10px;
+  text-transform:uppercase;
+  color:         #067B49;
+  font-family:   italic;
+  text-decoration: underline;
+  text-indent:   29px
+}
+table.header, table.footer {
+  MARGIN-LEFT:  2px;
+  MARGIN-RIGHT: 2px;
+  FONT-FAMILY:  Verdana, Arial, Helvetica, sans-serif;
+  color:        white;
+  height:       30px;
+  border:       0px;
+  width:        100%;
+  FONT-SIZE:    9pt;
+}
+table.header {
+  background-color:    Olive
+}
+table.footer {
+  background-color:    Olive
+}
+img {
+  border:         none;
+  PADDING-RIGHT:  0px;
+  PADDING-LEFT:   0px;
+  PADDING-BOTTOM: 0px;
+  PADDING-TOP:    0px;
+  margin:         10px;
+}
+a img {   
+  border:   none;
+}
+a.normal {}
+a {
+  COLOR:            #2D6CFF;
+  TEXT-DECORATION:  underline;
+}
+a:link {
+  COLOR:            #2D6CFF;
+  TEXT-DECORATION:  underline;
+}
+a:active {
+  COLOR: #FFFF00;
+  TEXT-DECORATION:none
+}
+a:visited {
+  COLOR:            maroon;
+  TEXT-DECORATION:  underline;
+}
+a:hover {
+  COLOR:        red;
+  TEXT-DECORATION:  overline underline;
+  font-weight:    bold;
+  font-size:      105%;
+}
+
+h1 {
+  TEXT-ALIGN:    center;
+  font-size:     280%;
+  color:         #336600;
+  margin-top:    3px;
+}
+h1.index {
+  COLOR:          #ffcc33;
+  FONT-FAMILY:    Helvetica, sans-serif;
+  FONT-SIZE:      20px;
+  text-align:     left;
+  text-decoration: none;
+  margin-bottom:  -10px;
+  margin-left:    20px;
+}
+img.index {
+  width:      60px;
+  height:     60px;
+}
+li {
+  FONT-FAMILY: arial, helvetica, sans-serif;
+  font-size:    12px; 
+}
+p  {
+  FONT-FAMILY:   arial, helvetica, sans-serif;
+  TEXT-ALIGN:   justify;
+  margin-right: 20px;
+  margin-left:  20px;
+  margin-top:   10px;
+  margin-bottom:15px;
+  text-indent:  20px;
+  font-size:    13px;
+}
+p:first-letter {
+  font-size:   130%;
+  font-family: Arial, Georgia, "Times New Roman", Times, serif;   /* Soit mise en Arial si possible */
+  font-weight: bold;
+}
+p.auteur {
+  clear:        both;
+  text-align:   right;
+  margin:       15px 30px 0 0;
+  font-size:    10pt;
+  font-weight:  bold;
+}
+p.credit-photos {
+  text-align:   right;
+  margin:       0 30px 15px 0;
+  font-size:    8pt;
+  color:        #666666;
+}
+.entete a:link, #pied a:link {
+  COLOR:           cyan;
+  TEXT-DECORATION: none;
+}
+.entete a:visited, #pied a:visited {
+  COLOR:           white;
+  TEXT-DECORATION: none;
+}
+.entete a:link, #pied a:link {
+  COLOR:           cyan;
+  TEXT-DECORATION: underline;
+}
+.entete, #pied {
+  text-align: left;
+  clear:      both; 
+  vertical-align:   text-top;
+  float:        none;
+  background:   transparent;
+  color:        yellow;
+  font-size:    15px;
+  font-weight:  bold;
+  padding-left: 10px;
+}
+.entete p {
+  margin:     10px;
+}
+#menu {
+  clear:          both;
+  float:          left;
+  margin:         0px 0px 0px 0px;
+  vertical-align: top;
+  text-align:    left;
+  color:         yellow;
+  font-weight:     bold;
+  padding-left:    3px;
+  width:           290px;
+  min-width:     150px;
+  max-width:     350px;
+  min-height:     450px;
+  max-height:     900px;
+  overflow:    auto;
+  background-image: url('../images/Bambou_nandina-domestica-DR.jpg');
+  /*  background:   url(../images/gest/menu_gazon.gif);  */
+  background-repeat: repeat;
+}
+#menu a:visited {
+  COLOR:           white;
+  TEXT-DECORATION: none;
+}
+#menu a:link {
+  COLOR:           cyan;
+  TEXT-DECORATION: none;
+}
+#menu a:hover {
+  COLOR:            yellow;
+  TEXT-DECORATION:  blink;
+  font-weight:      bold;
+  font-size:        100%;
+}
+#menu .titre_smenu {
+  -moz-border-radius: 0px 15px 15px 0px;
+  -webkit-border-radius: 0px 15px 15px 0px;
+  border-radius:  0px 15px 15px 0px;
+  background:    gray;
+  text-align:    left;
+  width:       90%;
+  color:       cyan;
+  display:        block;
+  BORDER-RIGHT:   #bbbbbb 3px solid ;
+  PADDING-RIGHT:  2px;
+  BORDER-TOP:     #000000 1px solid ;
+  PADDING-TOP:    2px;
+  BORDER-LEFT:    #000000 1px solid ;
+  PADDING-LEFT:   5px;
+  BORDER-BOTTOM:  #bbbbbb 3px solid ;
+  margin-top:    5px;
+  margin-left:   -5px;
+  FONT-SIZE:       16px;
+}
+#menu .titre_menu {
+  text-align:  center;
+  width:       95%;
+  color:       yellow;
+  display:     block;
+  margin-bottom:  3px;
+  BORDER-BOTTOM: 3px solid;
+  BORDER-BOTTOM-color:  yellow;
+  FONT-SIZE:     20px;
+  margin-bottom:  5px;
+  padding-bottom:5px;
+}
+#menu .titre_smenu:hover {
+  -moz-border-radius:    15px;
+  -webkit-border-radius: 15px;
+  border-radius:         15px;
+  FONT-SIZE:    100%;
+  BACKGROUND-color: #386F36;
+  PADDING:          2px;
+  width:            95%;
+  margin-top:       7px;
+  margin-left:      -7px;
+  margin-bottom:    3px;
+  border:           inset;
+}
+#menu .stitre_smenu {
+  font-size:       95%;
+  display:         block;
+  color:           cyan;
+  text-decoration: underline;
+  MARGIN-TOP:      5px;
+  border:          thin;
+  BORDER-LEFT-COLOR:   yellow;
+  BORDER-BOTTOM-WIDTH: thin;
+  BORDER-BOTTOM-COLOR: cyan;
+  BORDER-TOP-COLOR:    yellow;
+  BORDER-RIGHT-COLOR:  yellow;
+}
+#menu ul, #menu ul ul {
+  margin:         0px 0px 0px 0px; 
+  list-style-type: none;
+  padding-left:   10px;
+  font-size:      18px;
+}
+#menu li {
+  text-align:   left;
+  color:        yellow !important;
+  font-size:    20px;
+}
+#menu li li {
+  font-size:    15px;
+}
+#menu li.perso {
+  FONT-FAMILY:  helvetica, sans-serif, arial;
+  font-size:    15px;
+}
+#menu a:hover {
+  COLOR:         white;
+  /*  font-size:      105%; */
+  text-decoration: blink;
+}
+#corps {
+  -moz-border-radius: 15px;
+  vertical-align: top;
+  text-align:    left;
+  height:         auto;
+  font-size:     10px;
+  border-radius:  15px;
+}
+#IE.button {
+  background: Black;
+  color:     white;
+}
+#pale-blue button {
+  background: #e7eef5;
+  border:    1px solid #becfe3;
+  border-radius: 16px;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-box-shadow: inset 0 1px 0 0 #fff;
+  -webkit-box-shadow: inset 0 1px 0 0 #fff;
+  box-shadow: inset 0 1px 0 0 #fff;
+  color:     #2a65a6;
+  font-family: "lucida grande", sans-serif;
+  font-size:    12px;
+  font-weight: normal;
+  padding:   0px 0px 0px 0px;
+  text-align: center;
+  width:     auto;
+  min-width: 90px;
+  height:    auto;
+  clear:     none;
+}
+#pale-blue button:hover {
+  color:   red;
+  font-weight: bold;
+  font-size:  110%;
+  text-decoration:  underline;
+}
+ul.jardinage_sauvage li {
+  margin:             10px 0px 10px 80px;
+  list-style-type:    none;
+  padding-left:       10px;
+  font-size:          17px;
+}
+div.clear, div.step, hr.step {
+  clear:     both;
+  margin-top: 10px;
+} 
+hr.step {
+  width:      85%;
+  color:      #339933;
+  margin-left:  0px;
+}
+div.wiki {
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  display:       block;
+  margin:        2px;
+  FONT-SIZE:     11pt;
+  BACKGROUND:    black;
+  PADDING:       2px;
+  width:         76%;
+  FONT:          12px georgia, serif;
+  border:        outset;
+  text-align:    center;
+  margin-left:   180px;
+  width:         350px;
+  color:         yellow;
+}
+span.actu, div.actu {
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius:  15px;
+  display:   block;
+  FONT-SIZE:    11pt;
+  BACKGROUND:  maroon;
+  PADDING:     2px;
+  width:     auto;
+  FONT:         12px georgia, serif;
+  COLOR:        yellow;
+  border:      outset;
+  cursor:      help;
+  text-align:  center;
+  margin-left:  15px;
+  margin-right: 15px;
+}
+div.smenu {
+  display: none;
+}
+div.titre {
+  text-align:   center;
+  FONT-SIZE:    15px;
+  margin-right: 10px;
+}
+div.selector {
+  font-family: arial,helvetica,sans-serif;
+  width:       200%;
+  padding:     8px 5px;
+  margin-left: 5px;
+  margin-right:5px;
+}
+div.selector div.category {
+  display:    block;
+  float:    left;
+  font-size:  12px;
+  /*line-height:1;*/
+  height:   120px;
+  min-height: 100px;
+  padding:    5px;
+  position:   relative;
+  text-align: center;
+  vertical-align:bottom;
+  width:    132px;
+}
+.petitblocC {
+  display:      block;
+  text-align:   center;
+  FONT-SIZE:    11px;
+  margin:       5px;
+}
+.petitblocD p:first-letter, .petitblocG p:first-letter {
+  font-size: 110%;
+  font-weight: bold;
+}
+.petitblocD p, .petitblocG p {
+  FONT-SIZE:   10px;
+  margin:      5px;
+  text-indent: 10px;
+  text-align:  left;
+}
+.petitblocD ul, .petitblocG li {
+  FONT-SIZE:    10px;
+  margin-left:  -20px;
+  list-style:   url(../images/puce.gif);
+}
+.petitblocD b, .petitblocG b {
+  display:      block;
+  text-align:   center;
+  FONT-WEIGHT:  bold;
+  FONT-SIZE:    11px;
+}
+.petitblocD, .petitblocG {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+  -moz-box-shadow:       5px 5px 5px #000000;
+  -webkit-box-shadow: 5px 5px 5px #000000;
+  -o-box-shadow:      5px 5px 5px #000000;
+  box-shadow:         5px 5px 5px #000000;
+  FONT-FAMILY:      verdana, helvetica, sans-serif;
+  BACKGROUND-COLOR: #ffff99;
+  MARGIN:           10px;
+  WIDTH:            200px;
+  color:            black;
+}
+.petitblocD {
+  FLOAT:            right;
+  BORDER-RIGHT:     #000000 1px solid ;
+  PADDING-RIGHT:    0px;
+  BORDER-LEFT:      #bbbbbb 2px solid ;
+  PADDING-TOP:      5px;
+  BORDER-BOTTOM:    #000000 1px solid ;
+  PADDING-BOTTOM:   0px;
+  BORDER-TOP:       #bbbbbb 2px solid ;
+  PADDING-LEFT:     0px;
+}
+.petitblocG {
+  FLOAT:            left;
+  BORDER-RIGHT:     #bbbbbb 2px solid ;
+  PADDING-RIGHT:    0px;
+  BORDER-LEFT:      #000000 1px solid ;
+  PADDING-TOP:      0px;
+  BORDER-BOTTOM:    #bbbbbb 2px solid ;
+  PADDING-BOTTOM:   0px;
+  BORDER-TOP:       #000000 1px solid ;
+  PADDING-LEFT:     0px;
+}
+#info {
+  margin:             2px 0px 0px 0px;
+  padding-left:       10px;
+  font-size:          9px;
+  width:              250px;
+}
+.masquee {
+  position:     absolute;
+  visibility:   hidden;
+}
+.present a {
+  color:        red;
+  font-WEIGHT:  bold;
+}
+a.nav_precedent, a.nav_suivant {
+  display:          inline;
+  margin-top:       5px;
+  font-family:      arial,helvetica, sans-serif;
+  font-weight:      bold;
+  font-size:        1em;
+  margin-bottom:    5px;
+  text-decoration:  none;
+}
+a.nav_precedent {
+  float:            left;
+}
+a.nav_suivant {
+  float:            right;
+}
+.present {
+  -moz-border-radius:15px;
+  -webkit-border-radius: 15px;
+  border-radius:     15px;
+  -moz-box-shadow:   5px 5px 5px #000000;
+  -webkit-box-shadow:5px 5px 5px #000000;
+  -o-box-shadow:     5px 5px 5px #000000;
+  box-shadow:        5px 5px 5px #000000;
+  margin-top:       10px;
+  margin-left:      10px;
+  margin-bottom:    15px;
+  margin-right:     1px;
+  BORDER-RIGHT:     #bbbbbb 3px solid ;
+  PADDING-RIGHT:    2px;
+  BORDER-TOP:       #000000 1px solid ;
+  PADDING-TOP:      2px;
+  BORDER-LEFT:      #000000 1px solid ;
+  PADDING-LEFT:     5px;
+  BORDER-BOTTOM:    #bbbbbb 3px solid ;
+  PADDING-BOTTOM:   2px;
+  FONT-FAMILY:    verdana, sans-serif;
+  FONT-SIZE:        12px;
+  WIDTH:            96%;
+  font-style:       oblique;
+  BACKGROUND-COLOR: #CCFF33;
+}
+
+.puce {
+  list-style: url(../images/puce.gif);
+}
+h3.recette {
+  text-align:  center;
+  font-family: 'Times New Roman';
+  color:     #006633;
+  text-decoration:  underline;
+  text-transform: uppercase;
+  font-size: 200%;
+  clear:   both;
+  BORDER-TOP:  #000 2px solid ;
+  BORDER-TOP-COLOR:    black;
+  margin-top:  20px;
+  padding-top: 15px;
+} 
+#illust {
+  FONT-SIZE:  16px;
+  COLOR:      #006600;
+  text-align: justify;
+}
+div.Bio {
+  background: #CCFFCC ;
+  width:      98%;
+}
+div.imageBulle {
+  margin-left:  -1px;
+  margin-right: -2px;
+  margin-top:   5px;
+  float:        left;
+  text-align:   center;
+  font-size:    12px;
+  color:        black;
+}
+div.imageBulle img {
+  max-width:   50px;
+  max-height:  50px;
+}
+img.ico {
+  vertical-align: middle;
+  width:        18px;
+  height:       18px;
+  margin-left:  -1px;
+  margin-right: -2px;
+  margin-top:   5px;
+}
+img div.image, div.imageG, div.imageD, div.imageC {
+  border:     10px;
+  margin:     10px;
+}
+DIV.image, DIV.imageD, DIV.imageG, DIV.imageC, DIV.imageC_transparent, DIV.image_transparent  {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius:    10px;
+  PADDING-RIGHT:    2px;
+  PADDING-LEFT:     2px;
+  PADDING-BOTTOM:   5px;
+  PADDING-TOP:      2px;
+  BACKGROUND-COLOR: #ffffcc;
+  MARGIN:           10px;
+  text-align:       center;
+}
+DIV.imageC_transparent, DIV.image_transparent, div.transparent {
+  BACKGROUND-COLOR: transparent;
+}
+DIV.image, DIV.imageD  {
+  FLOAT:            right;
+}
+DIV.imageG {
+  FLOAT:            left;
+}
+DIV.imageC {
+  FLOAT:            none;
+}
+DIV.reactions {
+  -moz-border-radius:     15px;
+  -webkit-border-radius:  15px;
+  border-radius:          15px;
+  -moz-box-shadow:        5px 5px 5px #000000;
+  -webkit-box-shadow:     5px 5px 5px #000000;
+  -o-box-shadow:          5px 5px 5px #000000;
+  box-shadow:             5px 5px 5px #000000;
+  BORDER-RIGHT:     1px ;
+  PADDING-RIGHT:    5px;
+  BORDER-TOP:       1px ;
+  PADDING-LEFT:     5px;
+  PADDING-BOTTOM:   0px;
+  MARGIN:           0px auto;
+  FONT:             12px verdana, sans-serif;
+  BORDER-LEFT:      1px ;
+  WIDTH:            500px;
+  PADDING-TOP:      2px;
+  BORDER-BOTTOM:    5px ;
+  BACKGROUND-COLOR: #dddddd;
+}
+DIV.reactexte {
+  FONT-WEIGHT:      bold;
+}
+DIV.reactitre {
+  PADDING-RIGHT:    2px;
+  PADDING-LEFT:     2px;
+  PADDING-BOTTOM:   2px;
+  FONT:             bold 10px verdana, sans-serif;
+  COLOR:            #ffffff;
+  PADDING-TOP:      3px;
+  BACKGROUND-COLOR: #8a8a8a;
+}
+div.ENCADRE {
+  color:    #FFF;
+  padding:  10px 10px 20px 10px;
+  border:   5px solid #CDCCCA;
+  width:    90%;
+  margin:   50px 15px 15px 20px;
+  clear:    both;
+  background:#53220a;
+}
+div.ENCADRE h4 {
+  margin:   10px 0 10px 30px;
+  color:    #FFF;
+}
+.dt {
+  PADDING-RIGHT:  0px;
+  PADDING-LEFT:   0px;
+  PADDING-BOTTOM: 2px;
+  FONT:           10px verdana, sans-serif;
+  COLOR:          #666666;
+  PADDING-TOP:    2px;
+}
+.lettrine:first-letter {
+  FONT-SIZE: 300%;
+  FLOAT:     left;
+}
