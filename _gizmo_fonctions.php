@@ -4,11 +4,11 @@
 // utilisation du parser XML
 function AfficheCalendrierPlantes($fichier)
 {
-//définition des couleurs :
+//dï¿½finition des couleurs :
 // types attendus
 $s  = 'green';    // semis
-$r  = 'orange';   // récolte
-$rs = 'red';      // récolte année suivante
+$r  = 'orange';   // rï¿½colte
+$rs = 'red';      // rï¿½colte annï¿½e suivante
 $b  = 'white';    // rien : vide, espace ou blanc
 
  if ( !isset($fichier) || $fichier == '' ) $fichier = 'culture/calendrier_semis_recoltes.xml';
@@ -16,22 +16,22 @@ $b  = 'white';    // rien : vide, espace ou blanc
  if ( file_exists($fichier) )
     {
     $plantes = simplexml_load_file($fichier);   // on charge le fichier
-    // affiche l'en-tête du tableau
+    // affiche l'en-tï¿½te du tableau
     echo "<table style='width: 550px; align: center;'>";
-    LigneTete("Légume");
-    // lignes détail contenue dans le fichier xml :
+    LigneTete("Lï¿½gume");
+    // lignes dï¿½tail contenue dans le fichier xml :
     foreach($plantes->plante as $plante) {
       $j = -1;
       echo '<tr>';
       echo '<th class="haut" rowspan="2" style="text-align: right;"><b>' . utf8_decode($plante->nom) . '</b></th>';
       foreach($plante->children() as $nom=>$elem) {
-        // 12 mois de semis et 12 mois de récoltes
+        // 12 mois de semis et 12 mois de rï¿½coltes
         $i = 0; $j++;
         foreach($elem->children() as $e) {
           $i++;
           $t = strtolower(utf8_decode($e));
           // on met la couleur du fond en fonction du contenu (voir plus haut)
-          $balise = '<td class="calend ';  // début balise td
+          $balise = '<td class="calend ';  // dï¿½but balise td
           // on met un trait sur le haut du <tr>
           $balise = ( $j == 1 ) ? $balise . 'haut ' : $balise . '';
           switch ($t) {
@@ -41,7 +41,7 @@ $b  = 'white';    // rien : vide, espace ou blanc
             case 'r':   // plantation/repiquage
               $balise = $balise . $r;
               break;
-            case 'rs':     // récolte
+            case 'rs':     // rï¿½colte
               $balise = $balise . $rs;
               break;
             case 'f':     // floraison
@@ -61,7 +61,7 @@ $b  = 'white';    // rien : vide, espace ou blanc
       }
       echo '</tr>';
     }
-    LigneTete("Légume");
+    LigneTete("Lï¿½gume");
     // on ferme le tableau
     echo "</tr>";
     echo "</table>";
@@ -92,7 +92,7 @@ echo("<th class='FondNoir'>D</th>");
 echo("</tr>");
 }
 
-// renseigne la pop up avec les infos des nouvelles actualités
+// renseigne la pop up avec les infos des nouvelles actualitï¿½s
 // utilisation du parser XML
 function InfosPopup($fichier)
 {
@@ -189,14 +189,14 @@ function getBrowser()
 //             }
 //    }
 // check if we have a number
-    if ($version==null || $version=="") {$version="non détectée";}
+    if ($version==null || $version=="") {$version="non dï¿½tectï¿½e";}
 // recherche moteur de navigation
    $liste_moteurs = array("Electa", "KHTML", "webkit", "Gecko", "Presto", "Trident");
    foreach ( $liste_moteurs as $m )
    {
     if ( preg_match('/' . $m . '/i', $u_agent) ) $moteur = $m;
    }
-// c'est fini, on retourne les résultats   
+// c'est fini, on retourne les rï¿½sultats   
     return array(
         'userAgent' => $u_agent,
         'name'      => $bname,
@@ -213,7 +213,7 @@ function get_ip() {
   if($_SERVER) {
     if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) 
     $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-//    $port = $_SERVER['REMOTE_PORT'];  on ne recupère pas le port car il change à chaque fois que l'on fait F5
+//    $port = $_SERVER['REMOTE_PORT'];  on ne recupï¿½re pas le port car il change ï¿½ chaque fois que l'on fait F5
     elseif (isset($_SERVER['HTTP_CLIENT_IP']))
       $ip = $_SERVER['HTTP_CLIENT_IP'];
     else 
@@ -229,7 +229,7 @@ function get_ip() {
   }
   return $ip;
 }
-// renvoie les données de navigation
+// renvoie les donnï¿½es de navigation
 function maj_navi(&$page_courante, &$page_precedante) {
   (isset($_SERVER['HTTP_REFERER'])) ? $URL = $_SERVER['HTTP_REFERER'] : $URL = '';
   if(empty($URL))
@@ -239,18 +239,20 @@ function maj_navi(&$page_courante, &$page_precedante) {
   $page = parse_url($URL);
   if (isset($page['query'])) parse_str($page['query']);
   $page_precedante = $page;
-  parse_str($_SERVER['QUERY_STRING']);
+  var_dump($_SERVER['QUERY_STRING']);
+  parse_str($_SERVER['QUERY_STRING'],$qrystring);
+  var_dump($qrystring);
   $page_courante = $page;
   }
 //  echo 'page precedente '.$page_precedante.' / page courante '.$page_courante.'<br>';
   return ;
 }
 function maj_compteur($site){
-// connexion à la base de données
-  include ("compteurs_config.php");   // on charge les paramètres de connexion
+// connexion ï¿½ la base de donnï¿½es
+  include ("compteurs_config.php");   // on charge les paramï¿½tres de connexion
   $db = mysql_connect($DB_HOST,$DB_USER,$DB_PASSWORD);
   mysql_select_db($DB_NAME,$db);
-  // Comptage du nombre d'entrées dont le champ "ip" est l'adresse ip du visiteur 
+  // Comptage du nombre d'entrï¿½es dont le champ "ip" est l'adresse ip du visiteur 
   $ip = get_ip();
 
   // si le visiteur est un moteur de recherche, on ne le comptabilise pas :
@@ -265,31 +267,31 @@ function maj_compteur($site){
   {
       mysql_query("INSERT INTO " . $TABLE_ONLINE . " VALUES('" . $ip . "', '" . time() . "')");
   }
-  else // Si l'ip existe on fait simplement une mise à jour
+  else // Si l'ip existe on fait simplement une mise ï¿½ jour
   {
   mysql_query("UPDATE " . $TABLE_ONLINE . " SET duree='" . time() . "' WHERE ip='" . $ip . "'");
   }
 
   //Suppression du visiteur si le timestamp date de 3 minutes 
-    // On enregistre le temps écoulé par le visiteur
+    // On enregistre le temps ï¿½coulï¿½ par le visiteur
   $timestamp_3min = time() - (60 * 3);      // 60 * 3 = Nbr secondes dans 3 minutes (la fonction time() est en secondes)
   mysql_query("DELETE FROM " . $TABLE_ONLINE . " WHERE duree < '" . $timestamp_3min);
   
-  // Nombre de visiteurs connectées   
+  // Nombre de visiteurs connectï¿½es   
   // Comptage du nombre d'ip
   $retour = mysql_query("SELECT COUNT(*) AS qte_ip FROM " . $TABLE_ONLINE);
   $donnees = mysql_fetch_array($retour);
   
-  // Affichage du  Nombre de visiteurs connectées
+  // Affichage du  Nombre de visiteurs connectï¿½es
   if ( $donnees['qte_ip'] > 1 ) { $s = "s"; } else { $s = ""; }
 }
 
 /*
-J'ai développé cette source afin d'éviter de compter les visites des robots dans mes compteurs de visites/visiteurs/téléchargements.
-Cette fonction renvoie true si le visiteur est un robot d'un moteur de recherche. L'analyse se fait sur l'adresse IP du visiteur, donc si l'adresse IP d'un des robot vient à changer le script sera inefficace, c'est pourquoi il faut penser à maintenir à jour la liste des adresses IP (tous les 6 mois je pense)
-La liste que j'ai récupérée vient d'ici :
+J'ai dï¿½veloppï¿½ cette source afin d'ï¿½viter de compter les visites des robots dans mes compteurs de visites/visiteurs/tï¿½lï¿½chargements.
+Cette fonction renvoie true si le visiteur est un robot d'un moteur de recherche. L'analyse se fait sur l'adresse IP du visiteur, donc si l'adresse IP d'un des robot vient ï¿½ changer le script sera inefficace, c'est pourquoi il faut penser ï¿½ maintenir ï¿½ jour la liste des adresses IP (tous les 6 mois je pense)
+La liste que j'ai rï¿½cupï¿½rï¿½e vient d'ici :
 http://www.actulab.com/identification-des-robots.php
-(un peu vieille, je sais pas si certaines adresses ont changées, si vous savez précisez le, merci ;) 
+(un peu vieille, je sais pas si certaines adresses ont changï¿½es, si vous savez prï¿½cisez le, merci ;) 
 */
 // Renvoie TRUE si le visiteur de la page est un robot d'un moteur de recherche
 function IsVisitorBot($ip) {
@@ -316,7 +318,7 @@ function IsVisitorBot($ip) {
   $IPtab[] = '216.243.113.1';   // Gigablast
   $IPtab[] = '217.205.60.225';  // Mirago
   $IPtab[] = '218.145.25.';     // Naver
-  // Vérifie chaque adresse
+  // Vï¿½rifie chaque adresse
   if(isset($ip)) {
     $nb = count($IPtab);
     for($t = 0; $t < $nb; $t++) {
@@ -327,8 +329,8 @@ function IsVisitorBot($ip) {
   return false;
 }
 
-//  prépare la popup d'actualités
-// génère le code script pour préparer l'info bulle
+//  prï¿½pare la popup d'actualitï¿½s
+// gï¿½nï¿½re le code script pour prï¿½parer l'info bulle
 function actu() {
 $file_actu = htmlentities(file_get_contents('actu.html'));
 //echo "\n<script language=\"javascript\">\n";

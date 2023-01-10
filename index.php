@@ -6,12 +6,12 @@ $site = "gizmo";
 
 // fonctions de compteurs
 include("_" . $site . "_fonctions.php");
-include("compteurs.php");       // connexion � la base de donn�es
+//include("compteurs.php");       // connexion � la base de donn�es
 
 // Gestion des cookie et du d�marrage
-include("_" . $site . "_cookies.php");
+//include("_" . $site . "_cookies.php");
 
-if ( $BD_accessible ) maj_compteur($site);
+//if ( $BD_accessible ) maj_compteur($site);
 
 maj_navi($page_courante, $page_precedante);
 
