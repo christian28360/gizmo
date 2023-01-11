@@ -6,9 +6,9 @@ $site = "gizmo";
 
 // fonctions de compteurs
 include("_" . $site . "_fonctions.php");
-//include("compteurs.php");       // connexion � la base de donn�es
+//include("compteurs.php");       // connexion à la base de données
 
-// Gestion des cookie et du d�marrage
+// Gestion des cookie et du démarrage
 //include("_" . $site . "_cookies.php");
 
 //if ( $BD_accessible ) maj_compteur($site);
@@ -18,10 +18,10 @@ maj_navi($page_courante, $page_precedante);
 include("templates/bandeau.html.twig");
 
 if (isset($_GET['page'])) {
-// si on vient d'une URL, on r�cup�re le nom pour l'afficher dans le corps de la page web
+// si on vient d'une URL, on récupère le nom pour l'afficher dans le corps de la page web
   $corps = $_GET['page'];
 } else {
-// si page n'est pas d�finie, alors on charge la page d'accueil
+// si page n'est pas définie, alors on charge la page d'accueil
   $corps = "accueil_gizmo";
 }
 
@@ -43,7 +43,7 @@ if ($i != -1) {
   $corps = "_" . $site . "_404.php";
 }
 
-// enfin, on charge les diff�rents composants de la page
+// enfin, on charge les différents composants de la page
 include "_" . $site . "_header.php";
 
 echo "\n<table style='background: transparent;  width: 950px;' align='center' border='1'>\n";

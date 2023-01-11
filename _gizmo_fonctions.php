@@ -237,7 +237,10 @@ function maj_navi(&$page_courante, &$page_precedante) {
   else
   {
   $page = parse_url($URL);
-  if (isset($page['query'])) parse_str($page['query']);
+  var_dump($page['query']);
+
+  if (isset($page['query'])) parse_str($page['query'],$t);
+  var_dump($t);
   $page_precedante = $page;
   var_dump($_SERVER['QUERY_STRING']);
   parse_str($_SERVER['QUERY_STRING'],$qrystring);

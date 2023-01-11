@@ -21,8 +21,8 @@ if ((isset($_SESSION['admin_password'])) &&
       <tr>
         <td height="10" colspan="3">
     <?php
-    mysql_connect($DB_HOST, $DB_USER, $DB_PASSWORD);    // se connecter ‡ la base de donnÈes
-    mysql_select_db ($DB_NAME);               // la base de donnÈe doit exister 
+    mysql_connect($DB_HOST, $DB_USER, $DB_PASSWORD);    // se connecter √† la base de donn√©es
+    mysql_select_db ($DB_NAME);               // la base de donn√©e doit exister 
     $count = mysql_result($qry,0,'count(*)') or die(mysql_error);   // compteur des visiteurs depuis la mise en marche du site
 // on n'affiche que les 500 derniers (LIMIT 0 , 500")
     $qry = mysql_query("SELECT * FROM " . $TABLE_VISITORS. " ORDER BY entry_time DESC LIMIT 0 , 500");
@@ -42,7 +42,7 @@ if ((isset($_SESSION['admin_password'])) &&
   $on_line = 0;
   while ($row = mysql_fetch_array($qry))
   {
-  $ip = $row['ip_adress'];    // rÈcupËre la valeur du champ 'ip'
+  $ip = $row['ip_adress'];    // r√©cup√®re la valeur du champ 'ip'
   $date = date("d/m/Y H:i:s",$row['entry_time'] + $decalage );
   $res = mysql_query("SELECT count(*) FROM ".$TABLE_ONLINE." WHERE session_id='".$row['session_id']."'");
 
@@ -74,11 +74,11 @@ if ((isset($_SESSION['admin_password'])) &&
       <?php
       echo '<span class="Style12">&nbsp;Nombre total de visiteurs : '.$count.'</span></td></tr>';
       echo '<td colspan=7 align=left width="366" class="Style12">';
-      echo '<span class="Style12">&nbsp;actuellement connectÈs   : '.$on_line.' </span></td></tr>';
+      echo '<span class="Style12">&nbsp;actuellement connect√©s   : '.$on_line.' </span></td></tr>';
       ?>
     </td>
         <td colspan=7 align=center width="50%" bgcolor="#006699" class="Style14">
-      Graphe des visiteurs de la semaine (j-7 ‡ aujourd'hui)
+      Graphe des visiteurs de la semaine (j-7 √† aujourd'hui)
     </td>
       </tr>
       <tr bgcolor="#006699" class="Style14">
@@ -101,27 +101,27 @@ if ((isset($_SESSION['admin_password'])) &&
   ?>
   <?php
     // on remplit le tableau de la semaine : 
-      // dÈpart = demain  ‡ dimanche
+      // d√©part = demain  √† dimanche
       for ($i=$first+1;$i<7;$i++)  { echo '<td width="14%" align="center">'.$jours_tab[$i].'</td>'; }
-      // affiche jour 0 ‡ aujourd'hui
+      // affiche jour 0 √† aujourd'hui
       for ($i=0;$i<=$first;$i++)  { echo '<td width="14%" align="center">'.$jours_tab[$i].'</td>'; }
       echo "</tr><tr>";
       for ($i=6;$i>=0;$i--)  { echo "<td align='center'>".$liste[$i]."</td>"; }
  ?>
       </tr>
 <?PHP
-// affiche un comptage par IP, dÈsactivÈ, trop gourmand en ressources//      echo '<tr>';
+// affiche un comptage par IP, d√©sactiv√©, trop gourmand en ressources//      echo '<tr>';
 //      echo '<th colspan="3">Adresse IP</th>';
 //      echo '<th colspan="4">Nbre connexions</th>';
 //      echo '</tr>';
-// limite ‡ changer plus tard
+// limite √† changer plus tard
 //   $rqSQL = 'SELECT ip_adress, count(*) as "Nbre" FROM ' . $TABLE_VISITORS;
 //   $rqSQL = $rqSQL . ' GROUP BY ip_adress LIMIT 0 , 50';
 //   $qry = mysql_query( $rqSQL );
 //  while ($row = mysql_fetch_array($qry))
 //  {
-//    $ip = $row['ip_adress'];    // rÈcupËre la valeur du champ 'ip'
-//    $Nb = $row['Nbre'];         // rÈcupËre la valeur du champ comptage
+//    $ip = $row['ip_adress'];    // r√©cup√®re la valeur du champ 'ip'
+//    $Nb = $row['Nbre'];         // r√©cup√®re la valeur du champ comptage
     // affichage
 //    echo '<td colspan="3">&nbsp;' . $ip . '&nbsp;</td>';
 //    echo '<td colspan="4">&nbsp;' . $Nb . '&nbsp;</td>';
@@ -145,7 +145,7 @@ if ((isset($_SESSION['admin_password'])) &&
 ?>
   <span class="Style15"> Informations de connexion incorrectes  </span> <?php }?>
   <br>
-    Veuillez saisir vos informations de connexion afin de pouvoir accÈder &agrave; l'administration</td>
+    Veuillez saisir vos informations de connexion afin de pouvoir acc√©der &agrave; l'administration</td>
   </tr>
   <tr>
     <td>

@@ -1,14 +1,14 @@
 <td id="menu" valign="top">
   <div class="titre_menu"
-    <b>Accès rapide</b>
+    <b>AccÃ¨s rapide</b>
   </div>
 <ul class="menu">
 </ul><li><a href="?page=origine">Avant de quitter ma famille</a></li>
-  <li><a href="?page=arrivee">Mon arrivée dans ma nouvelle famille</a></li>
-  <li><a href="?page=vacances_2011">Mes premières vacances</a></li>
-  <li><a href="?page=vacances_2011_retour">Retour de vacances (épuisantes)</a></li>
-  <li><a href="?page=videos/judo">Je suis destiné à une grande carrière de sportif !</a></li>
-  <li><a href="?page=videos/exercices">J'entretiens ma forme pour rester au top de ma carrière de sportif !</a></li>
+  <li><a href="?page=arrivee">Mon arrivÃ©e dans ma nouvelle famille</a></li>
+  <li><a href="?page=vacances_2011">Mes premiÃ¨res vacances</a></li>
+  <li><a href="?page=vacances_2011_retour">Retour de vacances (Ã©puisantes)</a></li>
+  <li><a href="?page=videos/judo">Je suis destinÃ© Ã  une grande carriÃ¨re de sportif !</a></li>
+  <li><a href="?page=videos/exercices">J'entretiens ma forme pour rester au top de ma carriÃ¨re de sportif !</a></li>
 </ul>
 
   <?PHP /*
@@ -35,11 +35,11 @@
     </div>
     <div class="imageBulle">
       <a href="http://exomuscusante.christian-alcon.comule.com/index.php"
-         title="Exercices et étirements"
-         alt="Exercices et étirements"
+         title="Exercices et Ã©tirements"
+         alt="Exercices et Ã©tirements"
          target="_blank">
       >
-        <img src="gest/affiner_hanches.gif" alt="Exercices et étirements" />
+        <img src="gest/affiner_hanches.gif" alt="Exercices et Ã©tirements" />
         <br />
         Exercices de<br />(re)<br />mise en forme
       </a>

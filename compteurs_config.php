@@ -12,9 +12,9 @@ if (get_ip() == '127.0.0.1')
 //                      Fichier des d�finitions des compteurs: connexion sur serveur local.           //
 //*************************************************************************//
 $DB_HOST    = '127.0.0.1';          // nom h�te de la base de donn�e
-$DB_USER    = 'root';               // nom d'utilisateur de la bdd
-$DB_PASSWORD= '';                   // mot de passe de la bdd
-$DB_NAME    = 'statsGizmo';              // nom de la base de donn�e
+$DB_USER    = 'gizmo';               // nom d'utilisateur de la bdd
+$DB_PASSWORD= 'gizmo';                   // mot de passe de la bdd
+$DB_NAME    = 'gizmo';              // nom de la base de donn�e
 $serveur_local = true;
 $decalage   = 0;                      // d�calage horaire nul, on est � la maison
 }

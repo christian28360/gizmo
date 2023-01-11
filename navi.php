@@ -2,13 +2,13 @@
 
 function navi( $Precedent, $Prec_lib, $Home, $Suivant, $Suiv_lib) {
   $home    = '<a href="?page=accueil_gizmo"
-               title="Retour à la page d\'accueil">Accueil
+               title="Retour Ã  la page d\'accueil">Accueil
                </a>';
-// on crée la table avec les boutons de navigation :
+// on crÃ©e la table avec les boutons de navigation :
   echo("<table style='width: 90%; background: transparent; '>
                <tbody><tr><td align='left' width='300px'>&nbsp;");
 
-// Flèche gauche
+// FlÃ¨che gauche
     if ( ! $Precedent == "" and ! $Prec_lib == "") {
       echo ( "<a href='?page=" . $Precedent . "'
                  title='" . $Prec_lib . "' />&lt;&lt;&nbsp;" . $Prec_lib . "</a>" );
@@ -17,7 +17,7 @@ function navi( $Precedent, $Prec_lib, $Home, $Suivant, $Suiv_lib) {
 // Home
   echo( "</td><td align='center' width='50px'>" . $home . "</td>" );
 
-// Flèche droite
+// FlÃ¨che droite
   echo  ("<td align='right' width='300px'>&nbsp;");
   if ( !$Suivant == "" and !$Suiv_lib == "" ) {  // pas vide
      echo ("<a href='?page=" . $Suivant . "'
